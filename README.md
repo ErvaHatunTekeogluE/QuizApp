@@ -1,4 +1,1 @@
 # QuizApp
-# QuizApp
-# QuizApp
-# QuizApp
