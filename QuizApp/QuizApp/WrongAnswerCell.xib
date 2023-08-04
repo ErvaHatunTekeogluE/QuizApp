@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WrongAnswerCell" rowHeight="85" id="k1z-Qf-569" customClass="WrongAnswerCell" customModule="QuizApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k1z-Qf-569" id="SUZ-FT-2OG">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="RTa-Xn-NdH">
+                        <rect key="frame" x="20" y="10" width="374" height="65"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nix-cS-z8x">
+                                <rect key="frame" x="0.0" y="0.0" width="374" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOi-LO-caP">
+                                <rect key="frame" x="0.0" y="20.333333333333336" width="374" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSR-i4-vNm">
+                                <rect key="frame" x="0.0" y="44.666666666666664" width="374" height="20.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wSR-i4-vNm" firstAttribute="top" secondItem="hOi-LO-caP" secondAttribute="bottom" id="F9c-TH-LIr"/>
+                            <constraint firstAttribute="trailing" secondItem="Nix-cS-z8x" secondAttribute="trailing" id="Fyi-Ma-Kec"/>
+                            <constraint firstItem="hOi-LO-caP" firstAttribute="leading" secondItem="RTa-Xn-NdH" secondAttribute="leading" id="ILe-6b-CTt"/>
+                            <constraint firstAttribute="trailing" secondItem="wSR-i4-vNm" secondAttribute="trailing" id="cpR-3D-cpP"/>
+                            <constraint firstAttribute="trailing" secondItem="hOi-LO-caP" secondAttribute="trailing" id="e6z-3j-zxZ"/>
+                            <constraint firstItem="Nix-cS-z8x" firstAttribute="leading" secondItem="RTa-Xn-NdH" secondAttribute="leading" id="fnt-XY-hKZ"/>
+                            <constraint firstItem="wSR-i4-vNm" firstAttribute="leading" secondItem="RTa-Xn-NdH" secondAttribute="leading" id="jC7-pC-9cf"/>
+                            <constraint firstItem="Nix-cS-z8x" firstAttribute="top" secondItem="RTa-Xn-NdH" secondAttribute="top" id="lsi-wD-4po"/>
+                            <constraint firstItem="hOi-LO-caP" firstAttribute="top" secondItem="Nix-cS-z8x" secondAttribute="bottom" id="m0a-Wi-fU5"/>
+                            <constraint firstAttribute="bottom" secondItem="wSR-i4-vNm" secondAttribute="bottom" id="qk8-Tn-QTf"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="RTa-Xn-NdH" secondAttribute="trailing" constant="20" id="9rx-uV-Ggi"/>
+                    <constraint firstItem="RTa-Xn-NdH" firstAttribute="leading" secondItem="SUZ-FT-2OG" secondAttribute="leading" constant="20" id="VyI-hg-spi"/>
+                    <constraint firstItem="RTa-Xn-NdH" firstAttribute="top" secondItem="SUZ-FT-2OG" secondAttribute="top" constant="10" id="ho3-8b-9Ov"/>
+                    <constraint firstAttribute="bottom" secondItem="RTa-Xn-NdH" secondAttribute="bottom" constant="10" id="yqN-NO-va0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="correctAnswerLabel" destination="hOi-LO-caP" id="r22-3z-CCu"/>
+                <outlet property="questionLabel" destination="Nix-cS-z8x" id="Eca-N3-aDc"/>
+                <outlet property="wrongAnswerLabel" destination="wSR-i4-vNm" id="zcc-be-2a6"/>
+            </connections>
+            <point key="canvasLocation" x="36.641221374045799" y="-178.52112676056339"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

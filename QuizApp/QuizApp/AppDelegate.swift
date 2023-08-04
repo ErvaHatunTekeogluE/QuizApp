@@ -13,10 +13,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = QuestionViewController(question: "A guestion?", options: ["Option 1", "Option 2"]) {  print($0)}
-        window.makeKeyAndVisible()
-        self.window = window
+        
+        /*let viewController = QuestionViewController(question: "A guestion?", options: ["Option 1", "Option 2"]) {  print($0)}
+        _ = viewController.view
+        viewController.tableView.allowsMultipleSelection = true*/
+        
+//        let viewController = ResultViewController("You got 1/2 correct.",
+//                                                  [PresentableAnswer(question: "Question??", answer: "Yeah!!", wrongAnswer: nil),
+//                                                  PresentableAnswer(question: "Another question??", answer: "Hell yeah", wrongAnswer: "Hell no")])
+//        _ = viewController.view
+//        
+//        let window = UIWindow(frame: UIScreen.main.bounds)
+//        window.rootViewController = viewController
+//        window.makeKeyAndVisible()
+//        self.window = window
         return true
     }
 
