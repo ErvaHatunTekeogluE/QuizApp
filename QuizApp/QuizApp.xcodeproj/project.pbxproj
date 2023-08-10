@@ -10,6 +10,8 @@
 		8D3CD69A2A7D10720090DE7C /* ResultViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CD6992A7D10720090DE7C /* ResultViewControllerTest.swift */; };
 		8D3CD69C2A7D109E0090DE7C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CD69B2A7D109E0090DE7C /* ResultViewController.swift */; };
 		8D3CD69E2A7D111D0090DE7C /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3CD69D2A7D111D0090DE7C /* ResultViewController.xib */; };
+		8D83FB7D2A8524BE008B5E18 /* QuizEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D83FB7C2A8524BE008B5E18 /* QuizEngine.framework */; };
+		8D83FB7E2A8524BE008B5E18 /* QuizEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D83FB7C2A8524BE008B5E18 /* QuizEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8DBA45B72A7D190E0042E026 /* TableViewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA45B62A7D190E0042E026 /* TableViewHelpers.swift */; };
 		8DBA45B92A7D226A0042E026 /* CorrectAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA45B82A7D226A0042E026 /* CorrectAnswerCell.xib */; };
 		8DBA45BB2A7D27150042E026 /* WrongAnswerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA45BA2A7D27150042E026 /* WrongAnswerCell.xib */; };
@@ -37,10 +39,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8D83FB7F2A8524BE008B5E18 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8D83FB7E2A8524BE008B5E18 /* QuizEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8D3CD6992A7D10720090DE7C /* ResultViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewControllerTest.swift; sourceTree = "<group>"; };
 		8D3CD69B2A7D109E0090DE7C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8D3CD69D2A7D111D0090DE7C /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		8D83FB7C2A8524BE008B5E18 /* QuizEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QuizEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBA45B62A7D190E0042E026 /* TableViewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHelpers.swift; sourceTree = "<group>"; };
 		8DBA45B82A7D226A0042E026 /* CorrectAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CorrectAnswerCell.xib; sourceTree = "<group>"; };
 		8DBA45BA2A7D27150042E026 /* WrongAnswerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WrongAnswerCell.xib; sourceTree = "<group>"; };
@@ -66,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D83FB7D2A8524BE008B5E18 /* QuizEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +97,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D83FB7B2A8524BE008B5E18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D83FB7C2A8524BE008B5E18 /* QuizEngine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8DD24B732A7BEF24002C26E7 = {
 			isa = PBXGroup;
 			children = (
 				8DD24B7E2A7BEF24002C26E7 /* QuizApp */,
 				8DD24B952A7BEF26002C26E7 /* QuizAppTests */,
 				8DD24B7D2A7BEF24002C26E7 /* Products */,
+				8D83FB7B2A8524BE008B5E18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +167,7 @@
 				8DD24B782A7BEF24002C26E7 /* Sources */,
 				8DD24B792A7BEF24002C26E7 /* Frameworks */,
 				8DD24B7A2A7BEF24002C26E7 /* Resources */,
+				8D83FB7F2A8524BE008B5E18 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
