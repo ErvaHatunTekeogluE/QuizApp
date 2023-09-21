@@ -12,7 +12,7 @@ class ResultViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    private var summary: String = ""
+    var summary: String = ""
     private var answers: [PresentableAnswer] = []
     convenience init(_ summary: String, _ answers: [PresentableAnswer]) {
         self.init()

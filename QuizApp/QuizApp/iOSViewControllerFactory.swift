@@ -11,10 +11,11 @@ import QuizEngine
 class iOSViewControllerFactory: ViewControllerFactory {
     private let questions: [Question<String>]
     private let options: [Question<String>: [String]]
-    
-    init(questions: [Question<String>], options: [Question<String> : [String]]) {
+    private let correctAnswers: [Question<String>: [String]]
+    init(questions: [Question<String>], options: [Question<String> : [String]], correctAnswers: [Question<String>: [String]]) {
         self.questions = questions
         self.options = options
+        self.correctAnswers = correctAnswers
     }
     
     func questionViewController(for question: Question<String>, answerCallback: @escaping ([String]) -> Void) -> UIViewController {
@@ -27,24 +28,21 @@ class iOSViewControllerFactory: ViewControllerFactory {
     private func questionViewController(for question: Question<String>, options: [String], answerCallback: @escaping ([String]) -> Void) -> UIViewController {
         switch question {
         case .singleAnswer(let value):
-            let controller = questionViewController(question: question, value: value, options: options, selection: answerCallback)
-            return controller
+            return questionViewController(question: question, value: value, options: options, allowsMultipleSelection: false, selection: answerCallback)
         case .multipleAnswer(let value):
-            let controller = questionViewController(question: question, value: value, options: options, selection: answerCallback)
-            _ = controller.view
-            controller.tableView.allowsMultipleSelection = true
-            return controller
+            return questionViewController(question: question, value: value, options: options, allowsMultipleSelection: true, selection: answerCallback)
         }
     }
     
-    private func questionViewController(question: Question<String>, value: String, options:  [String], selection: @escaping ([String]) -> Void) -> QuestionViewController {
+    private func questionViewController(question: Question<String>, value: String, options:  [String], allowsMultipleSelection: Bool, selection: @escaping ([String]) -> Void) -> QuestionViewController {
         let presenter = QuestionPresenter(questions: questions, question: question)
-        let controller = QuestionViewController(question: value, options: options, selection: selection)
+        let controller = QuestionViewController(question: value, options: options, allowsMultipleSelection: allowsMultipleSelection, selection: selection)
         controller.title = presenter.title
         return controller
     }
     
     func resultsViewController(for result: QuizEngine.Result<Question<String>, [String]>) -> UIViewController {
-        return QuestionViewController()
+        let presenter = ResultsPresenter(result: result, correctAnswers: correctAnswers, questions: questions)
+        return ResultViewController(presenter.summary, [])
     }
 }
